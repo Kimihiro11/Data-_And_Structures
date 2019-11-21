@@ -15,3 +15,13 @@
 + 取出指定索引元素，将索引后的所有元素位置向前进1位
 + 数组尾部元素设置为null
 + 数组容量视情况缩容    
+
+#### 扩容/缩容 策略
++ Eager
++ Lazy
+
+#### 时间复杂度
++ 整体复杂度 O(n)
++ addLast removeLast O(1)
++ get element by index  O(1)
++ 其余操作都是O(n)

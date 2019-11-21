@@ -55,6 +55,12 @@ class Array:
         self._judge_index(index)
         return self._data[index]
 
+    def get_last_element(self) -> Any:
+        return self.get_element(self._size - 1)
+
+    def get_first_element(self) -> Any:
+        return self.get_element(0)
+
     def set_element(self, index: int, e: Any):
         self._judge_index(index)
         self._data[index] = e
