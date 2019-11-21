@@ -5,7 +5,7 @@
 # @Software: PyCharm
 from unittest import TestCase
 
-from StackAndQueue import LoopQueue
+from StackAndQueue.queue import LoopQueue
 
 
 class TestLoopQueue(TestCase):

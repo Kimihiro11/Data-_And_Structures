@@ -5,7 +5,8 @@
 # @Software: PyCharm
 
 from unittest import TestCase
-from .Stack import Stack
+
+from StackAndQueue.stack.Stack import Stack
 
 
 class TestStack(TestCase):

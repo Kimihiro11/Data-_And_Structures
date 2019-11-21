@@ -6,7 +6,7 @@
 from typing import Any
 
 from Array import Array
-from StackAndQueue.I_Stack import IStack
+from StackAndQueue.stack.I_Stack import IStack
 
 
 class Stack(IStack):

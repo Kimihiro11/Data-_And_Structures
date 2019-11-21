@@ -5,9 +5,9 @@
 # @Software: PyCharm
 import time
 
-from StackAndQueue import Queue
-from StackAndQueue.I_Queue import IQueue
-from StackAndQueue.LoopQueue import LoopQueue
+from StackAndQueue.queue import Queue
+from StackAndQueue.queue.I_Queue import IQueue
+from StackAndQueue.queue.LoopQueue import LoopQueue
 
 
 def compare(q: IQueue, count: int):

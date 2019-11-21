@@ -3,9 +3,9 @@
 # @Author : kimihiro
 # @File : test_array.py 
 # @Software: PyCharm
-import random
 import unittest
-from .Array import Array as Ar
+
+from Array.Array import Array as Ar
 
 
 class TestArray(unittest.TestCase):

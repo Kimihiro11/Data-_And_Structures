@@ -6,7 +6,7 @@
 from typing import Any
 
 from Array import Array
-from StackAndQueue.I_Queue import IQueue
+from StackAndQueue.queue.I_Queue import IQueue
 
 
 class Queue(IQueue):

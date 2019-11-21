@@ -6,7 +6,7 @@
 
 from unittest import TestCase
 
-from .Queue import Queue
+from StackAndQueue.queue.Queue import Queue
 
 
 class TestQueue(TestCase):

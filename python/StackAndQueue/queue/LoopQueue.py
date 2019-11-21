@@ -5,7 +5,7 @@
 # @Software: PyCharm
 from typing import Any
 
-from StackAndQueue.I_Queue import IQueue
+from StackAndQueue.queue.I_Queue import IQueue
 
 
 class LoopQueue(IQueue):
