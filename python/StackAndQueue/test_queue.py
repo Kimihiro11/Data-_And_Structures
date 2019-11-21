@@ -5,6 +5,7 @@
 # @Software: PyCharm
 
 from unittest import TestCase
+
 from .Queue import Queue
 
 
@@ -21,9 +22,9 @@ class TestQueue(TestCase):
 
     def test_enqueue(self):
         queue = Queue()
-        for i in range(10):
+        for i in range(100):
             queue.enqueue(i)
-        assert queue.get_size() == 10
+        assert queue.get_size() == 100
         assert queue.get_front() == 0
 
     def test_dequeue(self):

@@ -3,7 +3,6 @@
 # @Author : kimihiro
 # @File : Array.py 
 # @Software: PyCharm
-from dataclasses import dataclass
 from typing import Any
 
 
@@ -38,6 +37,8 @@ class Array:
     # 在index 索引处插入元素 e
     def add_element(self, index: int, element: Any):
         self._judge_index(index)
+        if (self._size == len(self._data)):
+            self._resize(self.get_capacity() * 2)
         _i = index + 1
         while _i < self._size:
             self._data[_i + 1] = self._data[_i]
