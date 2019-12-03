@@ -6,7 +6,7 @@
 from typing import Any
 
 from LinkedList.I_Queue import IQueue
-from LinkedList.Linked_List import LinkedList, Node
+from LinkedList.Linked_List import Node
 
 
 class LinkedQueue(IQueue):
