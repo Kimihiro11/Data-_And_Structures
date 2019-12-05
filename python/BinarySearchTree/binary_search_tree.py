@@ -195,7 +195,30 @@ class BST:
         self._root = self._remove(self._root, element)
 
     def _remove(self, node: Node, element: int) -> Node:
-        pass
+        if not node:
+            return node
+        if node.element > element:
+            node.left = self._remove(node.left, element)
+            return node
+        elif node.element < element:
+            node.right = self._remove(node.right, element)
+            return node
+        else:
+            if not node.left:
+                r_node = node.right
+                node.right = None
+                self._size -= 1
+                return r_node
+            if not node.right:
+                l_node = node.left
+                node.left = None
+                self._size -= 1
+                return l_node
+            rep_node = self._minimum(node.right)
+            rep_node.right = self._remove_minimum(node.right)
+            rep_node.left = node.left
+            node.left, node.right = Node
+            return rep_node
 
     def __str__(self):
         return "".join(self._gen_bst_string(self._root, 0))
@@ -223,11 +246,13 @@ if __name__ == "__main__":
 
     for i in range(7):
         a = random.randint(0, 99)
-        b.add_element(a)
-    # print(b)
+        b.add_element(i)
+    print(b)
     # print(b.contains(5))
     b.pre_order()
     print("============")
-    b.pre_order_nr()
-    print("============")
-    b.level_order()
+    # b.pre_order_nr()
+    # print("============")
+    # b.level_order()
+    b.remove(4)
+    print(b)
