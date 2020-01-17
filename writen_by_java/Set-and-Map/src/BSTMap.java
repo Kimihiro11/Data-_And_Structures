@@ -146,7 +146,7 @@ public class BSTMap<K extends Comparable<K>, V> implements Map<K, V> {
         System.out.println("Pride and Prejudice");
 
         ArrayList<String> words = new ArrayList<>();
-        if(FileOperation.readFile("/home/kimihiro/my_projects/Data_And_Structures/writen_by_java/Set-and-Map/pride-and-prejudice.txt", words)) {
+        if(FileOperation.readFile("Set-and-Map/pride-and-prejudice.txt", words)) {
             System.out.println("Total words: " + words.size());
 
             BSTMap<String, Integer> map = new BSTMap<>();

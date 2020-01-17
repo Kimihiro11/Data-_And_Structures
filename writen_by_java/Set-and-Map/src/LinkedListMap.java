@@ -103,7 +103,7 @@ public class LinkedListMap<K, V> implements Map<K, V> {
     public static void main(String[] args) {
         System.out.println("Pride and Prejudice");
         ArrayList<String> words = new ArrayList<>();
-        if (FileOperation.readFile("/home/kimihiro/my_projects/Data_And_Structures/writen_by_java/Set-and-Map/pride-and-prejudice.txt", words)) {
+        if (FileOperation.readFile("Set-and-Map/pride-and-prejudice.txt", words)) {
             System.out.println("Total words: " + words.size());
             LinkedListMap<String, Integer> map = new LinkedListMap<>();
             for (String word : words) {
