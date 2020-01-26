@@ -71,7 +71,7 @@ public class MaxHeap<E extends Comparable<E>> {
     private void shifDown(int k) {
         while (leftChild(k) < data.getSize()) {
             int j = leftChild(k);
-            if (j + 1 > data.getSize() && data.get(j + 1).compareTo(data.get(j)) > 0) {
+            if (j + 1 < data.getSize() && data.get(j + 1).compareTo(data.get(j)) > 0) {
                 j++;
             }
             if (data.get(k).compareTo(data.get(j)) >= 0)
@@ -102,12 +102,12 @@ public class MaxHeap<E extends Comparable<E>> {
         int[] arr = new int[testData.length];
         for (int i = 0; i < testData.length; i++)
             arr[i] = maxHeap.extractMax();
-//        for (int i = 1; i < testData.length; i++) {
-//            if (arr[i - 1] < arr[i]){
-//                System.out.println(i);
-//                throw new IllegalArgumentException("Error");
-//            }
-//        }
+        for (int i = 1; i < testData.length; i++) {
+            if (arr[i - 1] < arr[i]){
+                System.out.println(i);
+                throw new IllegalArgumentException("Error");
+            }
+        }
         System.out.println("SUCCESS");
         long endTime = System.nanoTime();
         return (endTime - startTime) / 1000000000.0;
